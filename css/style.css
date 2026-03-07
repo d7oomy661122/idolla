@@ -75,32 +75,32 @@
 }
 
 /*--------------------------------------------------------------
-# Primary Color (Pink)
+# Primary Color (Red)
 --------------------------------------------------------------*/
 #proccessing-outer-wrapper,
 .proccessing-loadbar div,
 .s-p-c-btn,
 .section-title-wrapper h3:before,
 header {
-    background: #e83e8c;
+    background: #fc4349;
 }
 ::selection {
-    background: #e83e8c;
+    background: #fc4349;
     color: #fff;
 }
 ::-moz-selection {
-    background: #e83e8c;
+    background: #fc4349;
     color: #fff;
 }
 #app-step-by,
 #s-p-c-title,
 .listing-item-by-val,
 .search-input-wrapper span.material-icons-two-tone {
-    color: #e83e8c;
+    color: #fc4349;
 }
 .ball-scale-multiple > div,
 .step-loader .ball-scale-multiple > div {
-    background-color: #e83e8c;
+    background-color: #fc4349;
 }
 .s-p-c-btn {
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
