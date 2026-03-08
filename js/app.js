@@ -250,4 +250,92 @@ window.addEventListener("load", function(){
         preloader.style.display = "none";
     }
 
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+    function openDownloadPopup(name, img, rating, downloads) {
+
+        document.getElementById("app_name").innerText = name;
+        document.getElementById("app_icon").src = img;
+        document.getElementById("app_rating").innerText = rating;
+        document.getElementById("app_down").innerText = downloads;
+
+        const popup = document.getElementById("loading_page");
+
+        popup.classList.remove("hide");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // Trending Apps
+    document.querySelectorAll(".featured-app-slider-item").forEach(el => {
+
+        el.addEventListener("click", function () {
+
+            const name = el.querySelector(".litn").innerText;
+            const img = el.querySelector("img").src;
+            const rating = el.querySelector(".listing-item-rating-val").innerText;
+
+            openDownloadPopup(name, img, rating, "100K");
+
+        });
+
+    });
+
+
+    // All Apps
+    document.querySelectorAll(".listing-item-wrapper").forEach(el => {
+
+        el.addEventListener("click", function () {
+
+            const name = el.querySelector(".litn").innerText;
+            const img = el.querySelector("img").src;
+            const rating = el.querySelector(".listing-item-rating-val").innerText;
+            const downloads = el.querySelector(".listing-item-downloads-val").innerText;
+
+            openDownloadPopup(name, img, rating, downloads);
+
+        });
+
+    });
+
+
+    // زر التحميل
+    const btn = document.getElementById("call_locker");
+
+    if (btn) {
+        btn.addEventListener("click", function () {
+            window.location.href = "https://confirmapp.online/cl/i/4oq9gr";
+        });
+    }
+
+
+    // اغلاق popup
+    const exit = document.getElementById("s-ex");
+
+    if (exit) {
+        exit.addEventListener("click", function () {
+            document.getElementById("loading_page").classList.add("hide");
+        });
+    }
+
+
+    // preloader fix
+    window.addEventListener("load", function () {
+
+        const preloader = document.getElementById("preloader");
+
+        if (preloader) {
+            preloader.style.display = "none";
+        }
+
+    });
+
+});
+
 });
