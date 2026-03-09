@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - HexMods Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-[#131b2f] to-[#0a0f1c] text-slate-200 font-sans pb-24 selection:bg-pink-500/30">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#131b2f]/90 backdrop-blur-md px-4 py-3 flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shrink-0 shadow-lg shadow-pink-500/20">
+            <i data-lucide="hexagon" class="w-6 h-6 text-white" fill="currentColor"></i>
+        </div>
+        <button class="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center shrink-0 hover:bg-slate-700/50 transition-colors">
+            <i data-lucide="settings" class="w-5 h-5 text-slate-400"></i>
+        </button>
+        <div class="flex-1 relative">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+            <input type="text" placeholder="Search games..." class="w-full bg-[#1c2438] text-sm rounded-full py-2.5 pl-9 pr-4 outline-none focus:ring-2 focus:ring-pink-500/50 transition-all placeholder:text-slate-500 border border-white/5">
+        </div>
+    </header>
+
+    <main class="px-4 pt-4 space-y-8 max-w-md mx-auto">
+        <section>
+            <h2 class="text-lg font-bold mb-4 tracking-tight">All Games</h2>
+            <div class="space-y-3" id="games-list-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 inset-x-0 bg-[#131b2f]/95 backdrop-blur-lg border-t border-white/5 pb-safe z-50">
+        <div class="flex items-center justify-around p-2 max-w-md mx-auto" id="bottom-nav">
+            <!-- Populated by navigation.js -->
+        </div>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
